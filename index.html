@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Flex Box</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="primary-header">
+      <h1 class="header__title">CSS Flex Box</h1>
+      <div class="header__action-buttons">
+        <a href="#" target="_blank" class="header__github-image-wrapper">
+          <img
+            src="./assets/images/github.png"
+            alt="Github"
+            class="header__github-image"
+          />
+        </a>
+        <button type="button" class="btn header__reset-default-btn">
+          Reset to Default
+        </button>
+        <button type="button" class="btn header__show-code-btn">
+          Show Codes
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="control-flexbox">
+        <div class="control-flexbox__drop-down-wrapper">
+          <button type="button" class="control-flexbox__drop-down-btn">
+            <span class="control-flexbox__drop-down-btn-text"
+              >Flex-Direction</span
+            >
+            <i
+              class="fa-solid fa-chevron-down control-flexbox__drop-down-icon"
+            ></i>
+          </button>
+
+          <div class="control-flexbox__buttons-wrapper flex-direction-wrapper">
+            <button type="button" class="control-flexbox__btn">
+              flex-start
+            </button>
+            <button type="button" class="control-flexbox__btn">flex-end</button>
+            <button type="button" class="control-flexbox__btn">center</button>
+            <button type="button" class="control-flexbox__btn">
+              space-between
+            </button>
+            <button type="button" class="control-flexbox__btn">
+              space-around
+            </button>
+            <button type="button" class="control-flexbox__btn">
+              space-evenly
+            </button>
+          </div>
+        </div>
+
+        <div class="control-flexbox__drop-down-wrapper">
+          <button type="button" class="control-flexbox__drop-down-btn">
+            <span class="control-flexbox__drop-down-btn-text"
+              >Justify-Content</span
+            >
+            <i
+              class="fa-solid fa-chevron-down control-flexbox__drop-down-icon"
+            ></i>
+          </button>
+
+          <div class="control-flexbox__buttons-wrapper justify-content-wrapper">
+            <button type="button" class="control-flexbox__btn">
+              flex-start
+            </button>
+            <button type="button" class="control-flexbox__btn">flex-end</button>
+            <button type="button" class="control-flexbox__btn">center</button>
+            <button type="button" class="control-flexbox__btn">
+              space-between
+            </button>
+            <button type="button" class="control-flexbox__btn">
+              space-around
+            </button>
+            <button type="button" class="control-flexbox__btn">
+              space-evenly
+            </button>
+          </div>
+        </div>
+
+        <div class="control-flexbox__drop-down-wrapper">
+          <button type="button" class="control-flexbox__drop-down-btn">
+            <span class="control-flexbox__drop-down-btn-text"
+              >Justify-Content</span
+            >
+            <i
+              class="fa-solid fa-chevron-down control-flexbox__drop-down-icon"
+            ></i>
+          </button>
+
+          <div class="control-flexbox__buttons-wrapper justify-content-wrapper">
+            <button type="button" class="control-flexbox__btn">
+              flex-start
+            </button>
+            <button type="button" class="control-flexbox__btn">flex-end</button>
+            <button type="button" class="control-flexbox__btn">center</button>
+            <button type="button" class="control-flexbox__btn">
+              space-between
+            </button>
+            <button type="button" class="control-flexbox__btn">
+              space-around
+            </button>
+            <button type="button" class="control-flexbox__btn">
+              space-evenly
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="display-flexbox">
+        <div class="display-flexbox__area">
+          <div class="display-flexbox__item">
+            <h1 class="display-flexbox__item-count">1</h1>
+
+            <button type="button" class="display-flexbox__item-delete-btn">
+              <i
+                class="fa-solid fa-trash display-flexbox__item-delete-icon"
+              ></i>
+            </button>
+          </div>
+
+          <div class="display-flexbox__item">
+            <h1 class="display-flexbox__item-count">2</h1>
+
+            <button type="button" class="display-flexbox__item-delete-btn">
+              <i
+                class="fa-solid fa-trash display-flexbox__item-delete-icon"
+              ></i>
+            </button>
+          </div>
+
+          <div class="display-flexbox__item">
+            <h1 class="display-flexbox__item-count">3</h1>
+
+            <button type="button" class="display-flexbox__item-delete-btn">
+              <i
+                class="fa-solid fa-trash display-flexbox__item-delete-icon"
+              ></i>
+            </button>
+          </div>
+
+          <div class="display-flexbox__item">
+            <h1 class="display-flexbox__item-count">4</h1>
+
+            <button type="button" class="display-flexbox__item-delete-btn">
+              <i
+                class="fa-solid fa-trash display-flexbox__item-delete-icon"
+              ></i>
+            </button>
+          </div>
+
+          <div class="display-flexbox__item">
+            <h1 class="display-flexbox__item-count">5</h1>
+
+            <button type="button" class="display-flexbox__item-delete-btn">
+              <i
+                class="fa-solid fa-trash display-flexbox__item-delete-icon"
+              ></i>
+            </button>
+          </div>
+        </div>
+        <h2 class="display-flexbox__add-items">Add Items</h2>
+
+        <button type="button" class="display-flexbox__add-items-btn">
+          <i class="fa-solid fa-plus display-flexbox__plus-icon"></i>
+
+          <span class="display-flexbox__add-items-btn-text">Add Item</span>
+        </button>
+      </section>
+    </main>
+    <section class="show-code">
+      <div class="show-code__overlay"></div>
+
+      <div class="show-code__modal">
+        <div class="show-code__heading-wrapper">
+          <h1 class="show-code__heading">Markup Codes</h1>
+          <button type="button" class="show-code__close-btn">
+            <i class="fa-solid fa-xmark show-code__close-icon"></i>
+          </button>
+        </div>
+
+        <p class="show-code__desc">
+          Below you will find the CSS and HTML required to generate the current
+          layout you built. <br />The CSS has been optimized to omit any
+          properties which have the default values. <br />For example,
+          <code class="red-color">flex-direction: row;</code> would not be
+          included since that is the default value for
+          <code class="red-color">flex-direction</code>.
+        </p>
+
+        <div class="show-code__box">
+          <div class="show-code__tabs">
+            <button type="button" class="show-code__btn show-code__btn--active">
+              CSS</button
+            ><button type="button" class="show-code__btn">HTML</button>
+          </div>
+
+          <div class="code-viewer">
+            <pre>
+    <code class="codes">
+    <span class="red-color">.container</span> <span class="red-color">{</span> 
+        <span class="green-color">display:</span> <span class="blue-color">flex;</span> 
+        <span class="green-color">justify-content:</span> <span class="blue-color">center;</span> 
+        <span class="green-color">align-items:</span> <span class="blue-color">center;</span>
+    <span class="red-color">}</span>
+    </code>
+    </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
