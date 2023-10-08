@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.png"
+      type="image/x-icon"
+    />
     <title>CSS Flex Box</title>
     <link rel="stylesheet" href="./assets/style.css" />
     <link
@@ -46,19 +51,13 @@
           </button>
 
           <div class="control-flexbox__buttons-wrapper flex-direction-wrapper">
+            <button type="button" class="control-flexbox__btn">row</button>
             <button type="button" class="control-flexbox__btn">
-              flex-start
+              row-reverse
             </button>
-            <button type="button" class="control-flexbox__btn">flex-end</button>
-            <button type="button" class="control-flexbox__btn">center</button>
+            <button type="button" class="control-flexbox__btn">column</button>
             <button type="button" class="control-flexbox__btn">
-              space-between
-            </button>
-            <button type="button" class="control-flexbox__btn">
-              space-around
-            </button>
-            <button type="button" class="control-flexbox__btn">
-              space-evenly
+              column-reverse
             </button>
           </div>
         </div>
@@ -93,28 +92,62 @@
 
         <div class="control-flexbox__drop-down-wrapper">
           <button type="button" class="control-flexbox__drop-down-btn">
+            <span class="control-flexbox__drop-down-btn-text">Align-Items</span>
+            <i
+              class="fa-solid fa-chevron-down control-flexbox__drop-down-icon"
+            ></i>
+          </button>
+
+          <div class="control-flexbox__buttons-wrapper align-items-wrapper">
+            <button type="button" class="control-flexbox__btn">
+              flex-start
+            </button>
+            <button type="button" class="control-flexbox__btn">flex-end</button>
+            <button type="button" class="control-flexbox__btn">center</button>
+            <button type="button" class="control-flexbox__btn">stretch</button>
+            <button type="button" class="control-flexbox__btn">baseline</button>
+          </div>
+        </div>
+
+        <div class="control-flexbox__drop-down-wrapper">
+          <button type="button" class="control-flexbox__drop-down-btn">
+            <span class="control-flexbox__drop-down-btn-text">Flex-Wrap</span>
+            <i
+              class="fa-solid fa-chevron-down control-flexbox__drop-down-icon"
+            ></i>
+          </button>
+
+          <div class="control-flexbox__buttons-wrapper flex-wrap-wrapper">
+            <button type="button" class="control-flexbox__btn">nowrap</button>
+            <button type="button" class="control-flexbox__btn">wrap</button>
+            <button type="button" class="control-flexbox__btn">
+              wrap-reverse
+            </button>
+          </div>
+        </div>
+
+        <div class="control-flexbox__drop-down-wrapper">
+          <button type="button" class="control-flexbox__drop-down-btn">
             <span class="control-flexbox__drop-down-btn-text"
-              >Justify-Content</span
+              >Align-Content</span
             >
             <i
               class="fa-solid fa-chevron-down control-flexbox__drop-down-icon"
             ></i>
           </button>
 
-          <div class="control-flexbox__buttons-wrapper justify-content-wrapper">
+          <div class="control-flexbox__buttons-wrapper align-content-wrapper">
             <button type="button" class="control-flexbox__btn">
               flex-start
             </button>
             <button type="button" class="control-flexbox__btn">flex-end</button>
             <button type="button" class="control-flexbox__btn">center</button>
+            <button type="button" class="control-flexbox__btn">stretch</button>
             <button type="button" class="control-flexbox__btn">
               space-between
             </button>
             <button type="button" class="control-flexbox__btn">
               space-around
-            </button>
-            <button type="button" class="control-flexbox__btn">
-              space-evenly
             </button>
           </div>
         </div>
@@ -122,7 +155,7 @@
 
       <section class="display-flexbox">
         <div class="display-flexbox__area">
-          <div class="display-flexbox__item">
+          <!-- <div class="display-flexbox__item">
             <h1 class="display-flexbox__item-count">1</h1>
 
             <button type="button" class="display-flexbox__item-delete-btn">
@@ -130,49 +163,9 @@
                 class="fa-solid fa-trash display-flexbox__item-delete-icon"
               ></i>
             </button>
-          </div>
-
-          <div class="display-flexbox__item">
-            <h1 class="display-flexbox__item-count">2</h1>
-
-            <button type="button" class="display-flexbox__item-delete-btn">
-              <i
-                class="fa-solid fa-trash display-flexbox__item-delete-icon"
-              ></i>
-            </button>
-          </div>
-
-          <div class="display-flexbox__item">
-            <h1 class="display-flexbox__item-count">3</h1>
-
-            <button type="button" class="display-flexbox__item-delete-btn">
-              <i
-                class="fa-solid fa-trash display-flexbox__item-delete-icon"
-              ></i>
-            </button>
-          </div>
-
-          <div class="display-flexbox__item">
-            <h1 class="display-flexbox__item-count">4</h1>
-
-            <button type="button" class="display-flexbox__item-delete-btn">
-              <i
-                class="fa-solid fa-trash display-flexbox__item-delete-icon"
-              ></i>
-            </button>
-          </div>
-
-          <div class="display-flexbox__item">
-            <h1 class="display-flexbox__item-count">5</h1>
-
-            <button type="button" class="display-flexbox__item-delete-btn">
-              <i
-                class="fa-solid fa-trash display-flexbox__item-delete-icon"
-              ></i>
-            </button>
-          </div>
+          </div> -->
         </div>
-        <h2 class="display-flexbox__add-items">Add Items</h2>
+        <h2 class="display-flexbox__add-items-txt">Add Items</h2>
 
         <button type="button" class="display-flexbox__add-items-btn">
           <i class="fa-solid fa-plus display-flexbox__plus-icon"></i>
@@ -196,9 +189,9 @@
           Below you will find the CSS and HTML required to generate the current
           layout you built. <br />The CSS has been optimized to omit any
           properties which have the default values. <br />For example,
-          <code class="red-color">flex-direction: row;</code> would not be
+          <code class="selector">flex-direction: row;</code> would not be
           included since that is the default value for
-          <code class="red-color">flex-direction</code>.
+          <code class="selector">flex-direction</code>.
         </p>
 
         <div class="show-code__box">
@@ -209,18 +202,29 @@
           </div>
 
           <div class="code-viewer">
-            <pre>
+            <button type="button" class="copy-code">
+              <i class="fa-regular fa-copy copy-code__icon"></i>
+            </button>
+            <pre class="css-code">
     <code class="codes">
-    <span class="red-color">.container</span> <span class="red-color">{</span> 
-        <span class="green-color">display:</span> <span class="blue-color">flex;</span> 
-        <span class="green-color">justify-content:</span> <span class="blue-color">center;</span> 
-        <span class="green-color">align-items:</span> <span class="blue-color">center;</span>
-    <span class="red-color">}</span>
+    <span class="selector">.container {</span>
+        <span class="show-css-code"></span>
+    <span class="selector">}</span>
+    </code>
+    </pre>
+
+            <pre class="html-code">
+    <code class="codes">
+    <span class="angle">&lt;</span><span class="tag">div</span> <span class="class">class=</span><span class="class-name">"container"</span><span class="angle">&gt;</span>
+        <span class="show-html-code"></span>
+    <span class="angle">&lt;/</span><span class="tag">div</span><span class="angle">&gt;</span>
     </code>
     </pre>
           </div>
         </div>
       </div>
     </section>
+
+    <script src="./assets/script.js"></script>
   </body>
 </html>

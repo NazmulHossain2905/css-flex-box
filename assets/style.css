@@ -143,15 +143,22 @@ body {
   padding-inline-end: 0.2rem;
 }
 
+.open-control-flex-box-icon {
+  transform: rotate(180deg);
+}
+
 .control-flexbox__buttons-wrapper {
   display: none;
   gap: 0.5rem;
   flex-wrap: wrap;
   align-content: center;
-
   padding-block: 1rem;
   margin-inline: 1rem;
   border-top: 1px solid var(--secondary-color);
+}
+
+.open-control-flex-box {
+  display: flex;
 }
 
 .control-flexbox__btn {
@@ -169,8 +176,9 @@ body {
   }
 }
 
-.justify-content-wrapper {
-  display: flex;
+.control-flexbox__btn--active {
+  background-color: var(--primary-color);
+  color: var(--light-color);
 }
 
 /* DISPLAY FLEX BOX STYLE */
@@ -188,16 +196,18 @@ body {
   padding: 0.5rem;
   display: flex;
   gap: 1rem;
+  overflow-y: auto;
 }
 
-.display-flexbox__add-items {
-  display: none;
+.display-flexbox__add-items-txt {
   position: absolute;
   top: 50%;
   left: 50%;
   translate: -50% -50%;
   font-size: 3rem;
   color: var(--gray-600);
+  user-select: none;
+  cursor: pointer;
   /* transform: translate(-50%, -50%); */
 }
 
@@ -207,15 +217,19 @@ body {
   right: 2rem;
   padding-inline: 1rem;
   height: 3.5rem;
+  width: 3.5rem;
   border-radius: 0.5rem;
   background-color: var(--primary-color);
-  transition: 0.2s linear;
+  transition: 0.1s linear;
   display: flex;
   gap: 1rem;
   align-items: center;
+  justify-content: center;
+  overflow: hidden;
 
   &:hover {
     background-color: var(--secondary-color);
+    width: 11rem;
   }
 }
 
@@ -237,18 +251,18 @@ body {
 
 /* ITEM STYLE */
 .display-flexbox__item {
-  width: 8rem;
-  height: 8rem;
-  background-color: var(--primary-color);
+  min-width: 8rem;
+  min-height: 8rem;
   border-radius: 0.625rem;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 0.1s linear;
   position: relative;
+  border: 1px solid var(--gray-600);
 
   &:hover {
-    scale: 1.02;
+    scale: 1.01;
   }
 }
 
@@ -258,6 +272,8 @@ body {
   font-family: var(--leckerli-one);
   color: var(--light-color);
   transition: 0.2s linear;
+  text-shadow: 1px 1px 0px black, -1px -1px black, -1px 2px black,
+    1px -2px black;
 }
 
 .display-flexbox__item-delete-btn {
@@ -393,6 +409,51 @@ body {
   border: 1px solid #bfbfbf;
   background: #f0f0f0;
   padding: 0.6rem 1rem;
+  overflow: auto;
+  height: 18rem;
+  position: relative;
+}
+
+.copy-code {
+  background-color: var(--gray-600);
+  padding: 0.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  border-radius: 0.4rem;
+  border: 1px solid #3335;
+  transition: color 0.1s linear;
+
+  &:hover {
+    background-color: #dddd;
+  }
+}
+
+.copy-code__icon {
+  font-size: 1rem;
+  color: var(--dark-color);
+  transition: color 0.1s linear;
+}
+
+.copy-code:hover .copy-code__icon {
+  color: var(--css-value-clr);
+}
+
+.check__icon {
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.html-code {
+  display: none;
+}
+
+.code-viewer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.code-viewer::-webkit-scrollbar-button {
+  margin-block: 20px;
 }
 
 .codes {
@@ -400,16 +461,57 @@ body {
   line-height: 1.5rem;
 }
 
-/* CODE COLOR */
-.red-color {
-  color: var(--red-color);
+/* CODE COLOR FOR HTML */
+:root {
+  --html-angle-clr: #bfbfbf;
+  --html-tag-clr: #da1d4a;
+  --html-class-clr: #f2b71e;
+  --html-class-name-clr: #1c82ad;
 }
-.green-color {
-  color: var(--primary-color);
+.angle {
+  color: var(--html-angle-clr);
 }
-.blue-color {
-  color: var(--secondary-color);
+.tag {
+  color: var(--html-tag-clr);
 }
-.yellow-color {
-  color: #f2b71e;
+.class {
+  color: var(--html-class-clr);
+}
+.class-name {
+  color: var(--html-class-name-clr);
+}
+
+/* CODE COLOR FOR CSS */
+:root {
+  --css-selector-clr: #da1d4a;
+  --css-property-crl: #00bd56;
+  --css-value-clr: #1c82ad;
+  /* --css-bracket-clr:  */
+}
+
+.selector {
+  color: var(--css-selector-clr);
+}
+.property {
+  color: var(--css-property-crl);
+}
+.value {
+  color: var(--css-value-clr);
+}
+
+/* CUSTOM SCROLL BAR */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Customize the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: var(--gray-600);
+  border-radius: 6px;
+}
+
+/* Customize the scrollbar track when hovered */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
 }
