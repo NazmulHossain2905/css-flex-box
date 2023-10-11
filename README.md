@@ -32,6 +32,10 @@ Practice CSS Flex Box Layout. 😎
 
 <img src='./assets/images/CSS-Flex-Box-7.png' alt='CSS-Flex-Box' width='100%'>
 
+---
+
+<img src='./assets/images/CSS-Flex-Box-8.png' alt='CSS-Flex-Box' width='100%'>
+
 ## Using Language.
 
 - HTML
